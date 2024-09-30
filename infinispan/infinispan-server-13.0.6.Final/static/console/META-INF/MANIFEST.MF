@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.1
+Built-By: infinispan
+Build-Jdk: 11.0.12
+Specification-Title: Infinispan Console
+Specification-Version: 0.15
+Specification-Vendor: JBoss, a division of Red Hat
+Implementation-Title: Infinispan Console
+Implementation-Version: 0.15.4.Final
+Implementation-Vendor-Id: org.infinispan
+Implementation-Vendor: JBoss, a division of Red Hat
+Implementation-URL: http://www.infinispan.org
+Java-Vendor: Red Hat, Inc.
+Java-Version: 11.0.12
+Os-Arch: amd64
+Os-Name: Linux
+Os-Version: 4.18.0-305.19.1.el8_4.x86_64
+Scm-Connection: scm:git:git@github.com:infinispan/infinispan-console.git
+Scm-Revision: f5b984d5dc161d9f349ffe777eee96b7ec48e173
+Scm-Url: https://github.com/infinispan/infinispan-console
+

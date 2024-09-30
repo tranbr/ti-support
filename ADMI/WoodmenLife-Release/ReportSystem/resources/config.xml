@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<fop>
+	<renderers>
+		<renderer mime="application/pdf">
+			<fonts>
+				<directory>fonts</directory>
+				<!-- Additional font directories can be added here. Paths must be
+					 relative to the '${TITANIUM_REPORTSYSTEM_HOME}/xsl' directory -->
+			</fonts>
+		</renderer>
+	</renderers>
+</fop>

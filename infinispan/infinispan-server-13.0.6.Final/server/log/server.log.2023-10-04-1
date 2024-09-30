@@ -1,0 +1,33 @@
+2023-10-04 07:34:17,775 INFO  (main) [BOOT] JVM OpenJDK 64-Bit Server VM Oracle Corporation 11.0.2+9
+2023-10-04 07:34:17,792 INFO  (main) [BOOT] JVM arguments = []
+2023-10-04 07:34:17,792 INFO  (main) [BOOT] PID = 24756
+2023-10-04 07:34:17,830 INFO  (main) [org.infinispan.SERVER] ISPN080000: Infinispan Server starting
+2023-10-04 07:34:17,830 INFO  (main) [org.infinispan.SERVER] ISPN080017: Server configuration: infinispan.xml
+2023-10-04 07:34:17,830 INFO  (main) [org.infinispan.SERVER] ISPN080032: Logging configuration: C:\Users\tranbr\apps\infinispan\infinispan-server-13.0.6.Final\server\conf\log4j2.xml
+2023-10-04 07:34:18,595 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'query-dsl-filter-converter-factory'
+2023-10-04 07:34:18,601 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'continuous-query-filter-converter-factory'
+2023-10-04 07:34:18,603 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'iteration-filter-converter-factory'
+2023-10-04 07:34:18,604 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'jdk.nashorn.api.scripting.NashornScriptEngineFactory'
+2023-10-04 07:34:19,361 WARN  (main) [org.infinispan.PERSISTENCE] ISPN000554: jboss-marshalling is deprecated and planned for removal
+2023-10-04 07:34:19,383 INFO  (main) [org.infinispan.CONTAINER] ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2023-10-04 07:34:19,571 INFO  (main) [org.infinispan.CONTAINER] ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.6.Final
+2023-10-04 07:34:19,577 INFO  (main) [org.infinispan.CONTAINER] ISPN000389: Loaded global state, version=13.0.6.Final timestamp=2023-09-12T15:09:10.147793700Z
+2023-10-04 07:34:19,701 INFO  (main) [org.infinispan.CLUSTER] ISPN000078: Starting JGroups channel `cluster` with stack `tcp`
+2023-10-04 07:34:23,945 INFO  (main) [org.jgroups.protocols.pbcast.GMS] LIDPTI-101-39437: no members discovered after 2011 ms: creating cluster as coordinator
+2023-10-04 07:34:23,961 INFO  (main) [org.infinispan.CLUSTER] ISPN000094: Received new cluster view for channel cluster: [LIDPTI-101-39437|0] (1) [LIDPTI-101-39437]
+2023-10-04 07:34:23,972 INFO  (main) [org.infinispan.CLUSTER] ISPN000079: Channel `cluster` local address is `LIDPTI-101-39437`, physical addresses are `[172.27.240.78:7800]`
+2023-10-04 07:34:24,448 INFO  (main) [org.jboss.threads] JBoss Threads version 2.3.3.Final
+2023-10-04 07:34:24,523 INFO  (main) [org.infinispan.CONTAINER] ISPN000104: Using EmbeddedTransactionManager
+2023-10-04 07:34:24,911 INFO  (main) [org.infinispan.server.core.RequestTracer] OpenTracing integration is disabled
+2023-10-04 07:34:24,993 INFO  (ForkJoinPool.commonPool-worker-19) [org.infinispan.SERVER] ISPN080018: Started connector HotRod (internal)
+2023-10-04 07:34:25,075 INFO  (main) [org.infinispan.SERVER] ISPN080018: Started connector REST (internal)
+2023-10-04 07:34:25,711 INFO  (main) [org.infinispan.SERVER] ISPN080004: Connector SinglePort (default) listening on 127.0.0.1:11222
+2023-10-04 07:34:25,711 INFO  (main) [org.infinispan.SERVER] ISPN080034: Server 'LIDPTI-101-39437' listening on http://127.0.0.1:11222
+2023-10-04 07:34:25,732 INFO  (main) [org.infinispan.SERVER] ISPN080001: Infinispan Server 13.0.6.Final started in 7901ms
+2023-10-04 07:34:41,480 WARN  (blocking-thread--p3-t6) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'conv' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-10-04 07:34:41,480 WARN  (blocking-thread--p3-t8) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'pluginMetadataCache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-10-04 07:34:41,481 WARN  (blocking-thread--p3-t7) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'setup' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-10-04 07:34:41,482 WARN  (blocking-thread--p3-t3) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'closereportscache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-10-04 07:34:41,484 WARN  (blocking-thread--p3-t2) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'kerbcache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-10-04 07:34:41,485 WARN  (blocking-thread--p3-t4) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'hamr' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-10-04 07:34:41,496 WARN  (blocking-thread--p3-t5) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'enqcache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.

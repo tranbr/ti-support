@@ -1,0 +1,9 @@
+2024-09-04T08:10:54,128-0700 DEBUG 10892 --- [MSC service thread 1-7] com.lidp.utilities.util.PropertyOverride : Properties will be loaded through Spring Cloud Config or, if that fails, the built-in default files.
+2024-09-04T08:10:57,611-0700  WARN 10892 --- [ServerService Thread Pool -- 155] com.lidp.utilities.util.PropertyOverride : No value or default value set for property TIMEOUT06 in ADMI_Enterprise
+2024-09-04T08:10:57,612-0700  WARN 10892 --- [ServerService Thread Pool -- 155] com.lidp.utilities.util.PropertyOverride : No value or default value set for property BATCHCNT03 in ADMI_Enterprise
+2024-09-04T08:10:57,616-0700  WARN 10892 --- [ServerService Thread Pool -- 155] com.lidp.utilities.util.PropertyOverride : No value or default value set for property TRIGGERS4 in ADMI_Enterprise
+2024-09-04T08:10:57,616-0700  INFO 10892 --- [ServerService Thread Pool -- 155] com.lidp.utilities.tsite.TSITE_Enterprise : Users: []
+2024-09-04T08:11:57,346-0700 DEBUG 10892 --- [ServerService Thread Pool -- 174] com.lidp.enterprise.ejb.util.DeploymentManager : Deployment Name: titanium-2023.10.0
+2024-09-04T08:11:57,367-0700  WARN 10892 --- [ServerService Thread Pool -- 174] com.lidp.utilities.util.PropertyOverride : No value or default value set for property DBDEF1000 in ADMI_Database
+2024-09-04T08:11:57,449-0700 DEBUG 10892 --- [ServerService Thread Pool -- 174] com.lidp.enterprise.ejb.util.DeploymentManager : com.lidp.model.deployment.TitaniumDeployment@60782202
+2024-09-04T08:11:57,521-0700  INFO 10892 --- [ServerService Thread Pool -- 168] com.lidp.enterprise.providers.caching.PluginManager : Titanium Plugins is disabled.

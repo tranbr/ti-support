@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <Properties>
+        <Property name="APP_NAME">Titanium</Property>
+        <Property name="FILENAME">${lower:${APP_NAME}}</Property>
+        <Property name="LOG_PATH">${env:ADMI_HOME}/logs/${APP_NAME}</Property>
+        <Property name="ARCHIVE_PATH">${LOG_PATH}/archives</Property>
+        <Property name="BG_ERROR_DIR">BackgroundErrorLog</Property>
+        <Property name="FG_ERROR_DIR">ForegroundErrorLog</Property>
+        <!-- Default values for ${map:key} -->
+        <Property name="BG_TYPE">!!$${event:Marker}-BG_TYPE!!</Property>
+        <Property name="COMPANY_CODE">!!$${event:Marker}-COMPANY_CODE!!</Property>
+        <Property name="FOLDER">!!$${event:Marker}-FOLDER!!</Property>
+        <Property name="USER_ID">!!$${event:Marker}-USER_ID!!</Property>
+        <Select>
+            <!-- If the system property is true, then enable using the location instead of the logger name -->
+            <SystemPropertyArbiter propertyName="lidp.logging.includeLocation" propertyValue="true">
+                <Property name="CONSOLE_LOGGER_NAME">%location</Property>
+                <Property name="FILE_LOGGER_NAME">%location</Property>
+            </SystemPropertyArbiter>
+            <DefaultArbiter>
+                <Property name="CONSOLE_LOGGER_NAME">%-40.40logger{1.}</Property>
+                <Property name="FILE_LOGGER_NAME">%logger</Property>
+            </DefaultArbiter>
+        </Select>
+        <Property name="DATE_PATTERN">%d{ISO8601_OFFSET_DATE_TIME_HHMM}</Property>
+        <Property name="LEVEL_PATTERN">%5level</Property>
+        <Property name="CONSOLE_THREAD_PATTERN">[%15.15thread]</Property>
+        <Property name="CONSOLE_MARKER_PATTERN">%notEmpty{[%24.24markerSimpleName] }</Property>
+        <Property name="CONSOLE_MDC_PATTERN">%equals{%X{TASK_NUM, USER, COMPANY, TX_RESOURCE} }{{} }{}</Property>
+        <Property name="CONSOLE_LOG_PATTERN">
+            %style{${DATE_PATTERN}}{dim} %highlight{${LEVEL_PATTERN}} %style{%pid}{magenta} %style{---}{dim} %style{${CONSOLE_THREAD_PATTERN}}{dim} %style{${CONSOLE_LOGGER_NAME}}{cyan} %style{${CONSOLE_MARKER_PATTERN}}{yellow}%style{${CONSOLE_MDC_PATTERN}}{cyan}%style{:}{dim} %msg%n
+        </Property>
+        <Property name="FILE_THREAD_PATTERN">[%thread]</Property>
+        <Property name="FILE_MARKER_PATTERN">%notEmpty{[%markerSimpleName] }</Property>
+        <Property name="FILE_MDC_PATTERN">%equals{%X }{{} }{}</Property>
+        <Property name="FILE_LOG_PATTERN">
+            ${DATE_PATTERN} ${LEVEL_PATTERN} %pid --- ${FILE_THREAD_PATTERN} ${FILE_LOGGER_NAME} ${FILE_MARKER_PATTERN}${FILE_MDC_PATTERN}: %msg%n
+        </Property>
+    </Properties>
+    <Filters>
+        <!-- disable all logging if SUPPRESS_LOGGING==true is in the MDC, however let all errors through -->
+        <DynamicThresholdFilter key="SUPPRESS_LOGGING" defaultThreshold="all" onMatch="NEUTRAL" onMismatch="DENY">
+            <KeyValuePair key="true" value="error"/>
+        </DynamicThresholdFilter>
+        <LookupFilter>
+            <MarkerFilter marker="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <LookupSwitch pattern="$${ctx:DEBUG_OVERRIDE:-null}">
+                <LookupCase value="null">
+                    <Select>
+                        <!--
+                        Markers for debugging
+                        
+                        DBUGXX - Open Debug Set
+                        DBBKPF - Background Performance
+                        DBBKGR - Background Processing (Parent Processing Only)
+                        DBADXX - Background Processing (ADXX)
+                        DBGCNV - Conversion Status Manager
+                        DBPROP - PROPProcessQueue (BG_Process_MSG_PROP)
+                        DBTEST - DBTEST (BG_Process_MSG_TEST)
+                        TRACET - Cycle Processing (Shows process dates during cycle) APPCMM00
+                        CMCVFS - Full Surrender Processing (Shows Full Processing dates and values) APCMCV00
+                        PTSRPW - Partial Surrender Processing
+                        INAM00 - INAM Processing APINAM00
+                        INAMTB - INAM TB (Interest Calculations) APINAM00
+                        DBREPT - Report Processing RWRW_ReportFormatter
+                        DBCLOS - Close Processing CMPY_CloseProcess/AGCY_CloseProcess
+                        SWAP24 - 24X7 Processing - SWAP_Process
+                        ENQMNG - ENQ Manager Processing
+                        ASSMGD - Assembly Guide Processing
+                        DYNNSP - Dynamic NSP Processing
+                        CONVPR - Conversion Processing
+                        ADC20D - Policy edit and build control
+                        MSGQUE - Message Queue (BG_Process)
+                        -->
+                        <SystemPropertyArbiter propertyName="lidp.logging.debug" propertyValue="ALL">
+                            <MarkerFilter marker="DEBUG" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                        </SystemPropertyArbiter>
+                        <SystemPropertyArbiter propertyName="lidp.logging.debug" propertyValue="CUSTOM">
+                            <!-- set onMatch="NEUTRAL"/"DENY" to enable/disable logging for that marker -->
+                            <!-- leave onMismatch="NEUTRAL" to ensure the other rules are evaluated -->
+                            <Filters>
+                                <MarkerFilter marker="DBUG01" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBUG02" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBUG03" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBBKPF" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBBKGR" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMA" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMB" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMC" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMD" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMF" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMG" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMH" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMJ" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMK" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADML" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMN" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMP" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMQ" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMR" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADMS" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADNC" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADND" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADNF" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADNK" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADNP" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBADNR" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBPROP" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBTEST" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="TRACET" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="CMCVFS" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="PTSRPW" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="INAM00" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="INAMTB" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBREPT" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DBCLOS" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="SWAP24" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="ENQMNG" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="ASSMGD" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="DYNNSP" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="CONVPR" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <MarkerFilter marker="ADC20D" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                                <!-- set onMatch="NEUTRAL/DENY" to enable/disable non-configured debug strings -->
+                                <MarkerFilter marker="DEBUG" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                            </Filters>
+                        </SystemPropertyArbiter>
+                        <DefaultArbiter>
+                            <!-- if the sys prop is not ALL/CUSTOM or not set then DEBUG marker logging is disabled -->
+                            <MarkerFilter marker="DEBUG" onMatch="DENY" onMismatch="NEUTRAL"/>
+                        </DefaultArbiter>
+                    </Select>
+                </LookupCase>
+                <!-- ${ctx:DEBUG_OVERRIDE} has value so use those overrides -->
+                <LookupCase>
+                    <LookupFilter>
+                        <LookupSwitch pattern="$${ctx:$${event:Marker}_OVERRIDE:-$${ctx:DEBUG_OVERRIDE:-null}}">
+                            <LookupCase value="on" result="NEUTRAL"/>
+                            <LookupCase result="DENY"/>
+                        </LookupSwitch>
+                    </LookupFilter>
+                </LookupCase>
+            </LookupSwitch>
+        </LookupFilter>
+        <LookupFilter>
+            <!--
+            DATABASE_IO and OPEN_CONNECTIONS markers can be overridden using desk code, but the code is DBUGIO and OPNCON, respectively.
+            So this filter will only run if the marker is SPECIAL_LOGGING and use the override for only the aforementioned markers.
+            For all other SPECIAL_LOGGING markers, marker filters are used.
+            -->
+            <MarkerFilter marker="SPECIAL_LOGGING" onMatch="ACCEPT" onMismatch="DENY"/>
+            <LookupSwitch pattern="$${event:Marker}">
+                <LookupCase value="DatabaseIO">
+                    <LookupFilter>
+                        <LookupSwitch pattern="$${ctx:DBUGIO_OVERRIDE:-$${ctx:DEBUG_OVERRIDE:-null}}">
+                            <LookupCase value="on" result="NEUTRAL"/>
+                            <Select>
+                                <!-- This special logging marker can be controlled by the lidp.logging.debug prop -->
+                                <SystemPropertyArbiter propertyName="lidp.logging.debug" propertyValue="ALL">
+                                    <LookupCase value="null" result="NEUTRAL"/>
+                                </SystemPropertyArbiter>
+                                <SystemPropertyArbiter propertyName="lidp.logging.debug" propertyValue="CUSTOM">
+                                    <LookupCase value="null" result="NEUTRAL"/>
+                                </SystemPropertyArbiter>
+                                <DefaultArbiter>
+                                    <LookupCase value="null" result="DENY"/>
+                                </DefaultArbiter>
+                            </Select>
+                            <LookupCase result="DENY"/>
+                        </LookupSwitch>
+                    </LookupFilter>
+                </LookupCase>
+                <LookupCase value="OpenConnections">
+                    <LookupFilter>
+                        <LookupSwitch pattern="$${ctx:OPNCON_OVERRIDE:-$${ctx:DEBUG_OVERRIDE:-null}}">
+                            <LookupCase value="on" result="NEUTRAL"/>
+                            <Select>
+                                <!-- This special logging marker can be controlled by the lidp.logging.debug prop -->
+                                <SystemPropertyArbiter propertyName="lidp.logging.debug" propertyValue="ALL">
+                                    <LookupCase value="null" result="NEUTRAL"/>
+                                </SystemPropertyArbiter>
+                                <SystemPropertyArbiter propertyName="lidp.logging.debug" propertyValue="CUSTOM">
+                                    <LookupCase value="null" result="NEUTRAL"/>
+                                </SystemPropertyArbiter>
+                                <DefaultArbiter>
+                                    <LookupCase value="null" result="DENY"/>
+                                </DefaultArbiter>
+                            </Select>
+                            <LookupCase result="DENY"/>
+                        </LookupSwitch>
+                    </LookupFilter>
+                </LookupCase>
+                <LookupCase>
+                    <!-- These special logging markers can't be overridden with DEBUG_OVERRIDE -->
+                    <!-- set onMatch to NEUTRAL/DENY to enable/disable logging for the marker -->
+                    <MarkerFilter marker="EnvironmentConfiguration" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                    <MarkerFilter marker="MasterConversion" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                    <MarkerFilter marker="deadlock_check" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                    <MarkerFilter marker="Security" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                    <!-- catch-all -->
+                    <MarkerFilter marker="SPECIAL_LOGGING" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+                </LookupCase>
+            </LookupSwitch>
+        </LookupFilter>
+        <!-- set onMatch to NEUTRAL/DENY to enable/disable logging for the marker -->
+        <MarkerFilter marker="BG_CYCLE" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+        <!-- TX_ERRORS is the parent marker for BG_ERROR and FG_ERROR and ABSOLUTE_FAILURE -->
+        <MarkerFilter marker="TX_ERRORS" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+        <MarkerFilter marker="BG_ERROR" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+        <MarkerFilter marker="FG_ERROR" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+        <MarkerFilter marker="ABSOLUTE_FAILURE" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+        <MarkerFilter marker="EMAIL" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+        <!-- set onMatch to "DENY" to disable flow tracing -->
+        <MarkerFilter marker="FLOW" onMatch="NEUTRAL" onMismatch="NEUTRAL"/>
+    </Filters>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${CONSOLE_LOG_PATTERN}"/>
+        </Console>
+        <RollingRandomAccessFile name="flat">
+            <Filters>
+                <MarkerFilter marker="DEBUG" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="SPECIAL_LOGGING" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="BG_CYCLE" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="TX_ERRORS" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="EMAIL" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <FileName>${LOG_PATH}/${FILENAME}.log</FileName>
+            <FilePattern>${ARCHIVE_PATH}/${FILENAME}.%d{yyyy-MM-dd}.%03i.log.gz</FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <PatternLayout disableAnsi="true" pattern="${FILE_LOG_PATTERN}"/>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="json">
+            <FileName>${LOG_PATH}/${FILENAME}.json.log</FileName>
+            <FilePattern>${ARCHIVE_PATH}/${FILENAME}.%d{yyyy-MM-dd}.%03i.json.log.gz</FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                <EventTemplateAdditionalField key="marker" format="JSON">
+                    <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                </EventTemplateAdditionalField>
+            </JsonTemplateLayout>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <Routing name="routing-special">
+            <MarkerFilter marker="SPECIAL_LOGGING" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${event:Marker}">
+                <!-- This route dynamically creates the special logging files -->
+                <Route>
+                    <RollingRandomAccessFile name="special:${event:Marker}">
+                        <FileName>${LOG_PATH}/Special/${event:Marker}.log</FileName>
+                        <FilePattern>${ARCHIVE_PATH}/Special/${event:Marker}.%d{yyyy-MM-dd}.%03i.log.gz</FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <PatternLayout disableAnsi="true" pattern="${FILE_LOG_PATTERN}"/>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Routing name="routing-special-json">
+            <MarkerFilter marker="SPECIAL_LOGGING" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${event:Marker}">
+                <!-- This route dynamically creates the special logging files -->
+                <Route>
+                    <RollingRandomAccessFile name="debug:${event:Marker}">
+                        <FileName>${LOG_PATH}/Special/${event:Marker}.json.log</FileName>
+                        <FilePattern>${ARCHIVE_PATH}/Special/${event:Marker}.%d{yyyy-MM-dd}.%03i.json.log</FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="500 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                            <EventTemplateAdditionalField key="marker" format="JSON">
+                                <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                            </EventTemplateAdditionalField>
+                        </JsonTemplateLayout>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Routing name="routing-debug">
+            <MarkerFilter marker="DEBUG" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${event:Marker}">
+                <!-- This route dynamically creates the debug logging files -->
+                <Route>
+                    <RollingRandomAccessFile name="debug:${event:Marker}">
+                        <FileName>${LOG_PATH}/Debug/ADMI_${event:Marker}.log</FileName>
+                        <FilePattern>${ARCHIVE_PATH}/Debug/ADMI_${event:Marker}.%d{yyyy-MM-dd}.%03i.log</FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="100 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <PatternLayout disableAnsi="true" pattern="${FILE_LOG_PATTERN}"/>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Routing name="routing-debug-json">
+            <MarkerFilter marker="DEBUG" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${event:Marker}">
+                <!-- This route dynamically creates the debug logging files -->
+                <Route>
+                    <RollingRandomAccessFile name="debug:${event:Marker}">
+                        <FileName>${LOG_PATH}/Debug/ADMI_${event:Marker}.json.log</FileName>
+                        <FilePattern>${ARCHIVE_PATH}/Debug/ADMI_${event:Marker}.%d{yyyy-MM-dd}.%03i.json.log</FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="500 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                            <EventTemplateAdditionalField key="marker" format="JSON">
+                                <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                            </EventTemplateAdditionalField>
+                        </JsonTemplateLayout>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <RollingRandomAccessFile name="flat-client-listener">
+            <FileName>${LOG_PATH}/Listener/ADMI_Client_Listener.log</FileName>
+            <FilePattern>${ARCHIVE_PATH}/Listener/ADMI_Client_Listener.%d{yyyy-MM-dd}.%03i.log.gz</FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <PatternLayout disableAnsi="true" pattern="${FILE_LOG_PATTERN}"/>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="json-client-listener">
+            <FileName>${LOG_PATH}/Listener/ADMI_Client_Listener.json.log</FileName>
+            <FilePattern>${ARCHIVE_PATH}/Listener/ADMI_Client_Listener.%d{yyyy-MM-dd}.%03i.json.log.gz</FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                <EventTemplateAdditionalField key="marker" format="JSON">
+                    <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                </EventTemplateAdditionalField>
+            </JsonTemplateLayout>            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="flat-mib-webdirect">
+            <FileName>${LOG_PATH}/WebDirect/WebDirect.log</FileName>
+            <FilePattern>${ARCHIVE_PATH}/WebDirect/WebDirect.%d{yyyy-MM-dd}.%03i.log.gz</FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <PatternLayout disableAnsi="true" pattern="${FILE_LOG_PATTERN}"/>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="json-mib-webdirect">
+            <FileName>${LOG_PATH}/WebDirect/WebDirect.json.log</FileName>
+            <FilePattern>${ARCHIVE_PATH}/WebDirect/WebDirect.%d{yyyy-MM-dd}.%03i.json.log.gz</FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                <EventTemplateAdditionalField key="marker" format="JSON">
+                    <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                </EventTemplateAdditionalField>
+            </JsonTemplateLayout>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <Routing name="routing-bg-cycle">
+            <MarkerFilter marker="BG_CYCLE" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:BG_TYPE}+$${map:COMPANY_CODE}">
+                <!-- This route dynamically creates the BG cycle files -->
+                <Route>
+                    <RollingRandomAccessFile name="bg-cycle:${map:BG_TYPE}">
+                        <FileName>
+                            ${LOG_PATH}/${BG_ERROR_DIR}/${map:BG_TYPE}/${map:COMPANY_CODE}_${map:BG_TYPE}_Cycle.log
+                        </FileName>
+                        <FilePattern>
+                            ${ARCHIVE_PATH}/${BG_ERROR_DIR}/${map:BG_TYPE}/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_${map:BG_TYPE}_Cycle.%03i.log.gz
+                        </FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <PatternLayout disableAnsi="true" pattern="%m%n"/>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Routing name="routing-bg-cycle-json">
+            <MarkerFilter marker="BG_CYCLE" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:BG_TYPE}+$${map:COMPANY_CODE}">
+                <!-- This route dynamically creates the BG cycle files -->
+                <Route>
+                    <RollingRandomAccessFile name="bg-cycle:${map:BG_TYPE}">
+                        <FileName>
+                            ${LOG_PATH}/${BG_ERROR_DIR}/${map:BG_TYPE}/${map:COMPANY_CODE}_${map:BG_TYPE}_Cycle.json.log
+                        </FileName>
+                        <FilePattern>
+                            ${ARCHIVE_PATH}/${BG_ERROR_DIR}/${map:BG_TYPE}/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_${map:BG_TYPE}_Cycle.%03i.json.log.gz
+                        </FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                            <EventTemplateAdditionalField key="marker" format="JSON">
+                                <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                            </EventTemplateAdditionalField>
+                        </JsonTemplateLayout>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Routing name="routing-bg-error">
+            <MarkerFilter marker="BG_ERROR" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:FOLDER}+$${map:COMPANY_CODE}+$${map:USER_ID}">
+                <!-- This route dynamically creates the BG error files -->
+                <Route>
+                    <RollingRandomAccessFile name="bg-error:${map:FOLDER}+${map:COMPANY_CODE}+${map:USER_ID}">
+                        <FileName>
+                            ${LOG_PATH}/${BG_ERROR_DIR}/${map:FOLDER}/${map:COMPANY_CODE}_${map:USER_ID}.log
+                        </FileName>
+                        <FilePattern>
+                            ${ARCHIVE_PATH}/${BG_ERROR_DIR}/${map:FOLDER}/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_${map:USER_ID}.%03i.log.gz
+                        </FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <PatternLayout disableAnsi="true" pattern="%m%n"/>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+            <IdlePurgePolicy timeToLive="30" timeUnit="minutes"/>
+        </Routing>
+        <Routing name="routing-bg-error-json">
+            <MarkerFilter marker="BG_ERROR" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:FOLDER}+$${map:COMPANY_CODE}+$${map:USER_ID}">
+            <!-- This route dynamically creates the BG error files -->
+                <Route>
+                    <RollingRandomAccessFile name="bg-error:${map:FOLDER}+${map:COMPANY_CODE}+${map:USER_ID}">
+                        <FileName>
+                            ${LOG_PATH}/${BG_ERROR_DIR}/${map:FOLDER}/${map:COMPANY_CODE}_${map:USER_ID}.json.log
+                        </FileName>
+                        <FilePattern>
+                            ${ARCHIVE_PATH}/${BG_ERROR_DIR}/${map:FOLDER}/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_${map:USER_ID}.%03i.json.log.gz
+                        </FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                            <EventTemplateAdditionalField key="marker" format="JSON">
+                                <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                            </EventTemplateAdditionalField>
+                        </JsonTemplateLayout>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+            <IdlePurgePolicy timeToLive="30" timeUnit="minutes"/>
+        </Routing>
+        <Routing name="routing-fg-error">
+            <MarkerFilter marker="FG_ERROR" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:COMPANY_CODE}+$${map:USER_ID}">
+                <!-- This route dynamically creates the FG error files -->
+                <Route>
+                    <RollingRandomAccessFile name="fg-error+${map:COMPANY_CODE}+${map:USER_ID}">
+                        <FileName>
+                            ${LOG_PATH}/${FG_ERROR_DIR}/${map:COMPANY_CODE}_${map:USER_ID}.log
+                        </FileName>
+                        <FilePattern>
+                            ${ARCHIVE_PATH}/${FG_ERROR_DIR}/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_${map:USER_ID}.%03i.log.gz
+                        </FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <PatternLayout disableAnsi="true" pattern="%m%n"/>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+            <IdlePurgePolicy timeToLive="30" timeUnit="minutes"/>
+        </Routing>
+        <Routing name="routing-fg-error-json">
+            <MarkerFilter marker="FG_ERROR" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:COMPANY_CODE}+$${map:USER_ID}">
+                <!-- This route dynamically creates the FG error files -->
+                <Route>
+                    <RollingRandomAccessFile name="fg-error+${map:COMPANY_CODE}+${map:USER_ID}">
+                        <FileName>
+                            ${LOG_PATH}/${FG_ERROR_DIR}/${map:COMPANY_CODE}_${map:USER_ID}.json.log
+                        </FileName>
+                        <FilePattern>
+                            ${ARCHIVE_PATH}/${FG_ERROR_DIR}/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_${map:USER_ID}.%03i.json.log.gz
+                        </FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                            <EventTemplateAdditionalField key="marker" format="JSON">
+                                <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                            </EventTemplateAdditionalField>
+                        </JsonTemplateLayout>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+            <IdlePurgePolicy timeToLive="30" timeUnit="minutes"/>
+        </Routing>
+        <RollingRandomAccessFile name="flat-absolute-failure">
+            <MarkerFilter marker="ABSOLUTE_FAILURE" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <FileName>
+                ${LOG_PATH}/${FG_ERROR_DIR}/AbsoluteFailure.log
+            </FileName>
+            <FilePattern>
+                ${ARCHIVE_PATH}/${FG_ERROR_DIR}/%d{yyyy-MM-dd}_AbsoluteFailure.%03i.log.gz
+            </FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <PatternLayout disableAnsi="true" pattern="%m%n"/>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="json-absolute-failure">
+            <MarkerFilter marker="ABSOLUTE_FAILURE" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <FileName>
+                ${LOG_PATH}/${FG_ERROR_DIR}/AbsoluteFailure.json.log
+            </FileName>
+            <FilePattern>
+                ${ARCHIVE_PATH}/${FG_ERROR_DIR}/%d{yyyy-MM-dd}_AbsoluteFailure.%03i.json.log.gz
+            </FilePattern>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                <EventTemplateAdditionalField key="marker" format="JSON">
+                    <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                </EventTemplateAdditionalField>
+            </JsonTemplateLayout>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+        <Routing name="routing-email">
+            <MarkerFilter marker="EMAIL" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:COMPANY_CODE}">
+                <!-- This route dynamically creates the email log files -->
+                <Route>
+                    <RollingRandomAccessFile name="email:${map:COMPANY_CODE}">
+                        <FileName>${LOG_PATH}/${BG_ERROR_DIR}/EMAIL/${map:COMPANY_CODE}_EMAIL.log</FileName>
+                        <FilePattern>${ARCHIVE_PATH}/${BG_ERROR_DIR}/EMAIL/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_EMAIL.%03i.log.gz</FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <PatternLayout disableAnsi="true" pattern="%m%n"/>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+            <IdlePurgePolicy timeToLive="30" timeUnit="minutes"/>
+        </Routing>
+        <Routing name="routing-email-json">
+            <MarkerFilter marker="EMAIL" onMatch="NEUTRAL" onMismatch="DENY"/>
+            <Routes pattern="$${map:COMPANY_CODE}">
+                <!-- This route dynamically creates the email log files -->
+                <Route>
+                    <RollingRandomAccessFile name="email:${map:COMPANY_CODE}">
+                        <FileName>${LOG_PATH}/${BG_ERROR_DIR}/EMAIL/${map:COMPANY_CODE}_EMAIL.json.log</FileName>
+                        <FilePattern>${ARCHIVE_PATH}/${BG_ERROR_DIR}/EMAIL/%d{yyyy-MM-dd}_${map:COMPANY_CODE}_EMAIL.%03i.json.log.gz</FilePattern>
+                        <Policies>
+                            <OnStartupTriggeringPolicy/>
+                            <SizeBasedTriggeringPolicy size="300 MB"/>
+                            <TimeBasedTriggeringPolicy/>
+                        </Policies>
+                        <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json" locationInfoEnabled="${sys:lidp.logging.includeLocation}">
+                            <EventTemplateAdditionalField key="marker" format="JSON">
+                                <value>{"$resolver": "fullMarker", "field": "name"}</value>
+                            </EventTemplateAdditionalField>
+                        </JsonTemplateLayout>
+                        <DefaultRolloverStrategy max="20"/>
+                    </RollingRandomAccessFile>
+                </Route>
+            </Routes>
+            <IdlePurgePolicy timeToLive="30" timeUnit="minutes"/>
+        </Routing>
+    </Appenders>
+    <Loggers><!--JSON Copies of all Logging files can be enabled below by uncommenting-->
+        <Root level="error" includeLocation="${sys:lidp.logging.includeLocation}">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="flat"/>
+            <!--<AppenderRef ref="json"/>-->
+        </Root>
+        <Logger name="com.lidp" level="trace" additivity="false" includeLocation="${sys:lidp.logging.includeLocation}">
+            <AppenderRef ref="console" level="error"/>
+            <AppenderRef ref="flat"/>
+            <AppenderRef ref="routing-special"/>
+            <AppenderRef ref="routing-debug"/>
+            <AppenderRef ref="routing-bg-cycle"/>
+            <AppenderRef ref="routing-bg-error"/>
+            <AppenderRef ref="routing-fg-error"/>
+            <AppenderRef ref="flat-absolute-failure"/>
+            <AppenderRef ref="routing-email"/>
+            <!--<AppenderRef ref="json"/>-->
+            <!--<AppenderRef ref="routing-special-json"/>-->
+            <!--<AppenderRef ref="routing-debug-json"/>-->
+            <!--<AppenderRef ref="routing-bg-cycle-json"/>-->
+            <!--<AppenderRef ref="routing-bg-error-json"/>-->
+            <!--<AppenderRef ref="routing-fg-error-json"/>-->
+            <!--<AppenderRef ref="json-absolute-failure"/>-->
+            <!--<AppenderRef ref="routing-email-json"/>-->
+        </Logger>
+        <Logger name="com.lidp.listener.client" level="trace" additivity="false" includeLocation="${sys:lidp.logging.includeLocation}">
+            <AppenderRef ref="console" level="info"/>
+            <AppenderRef ref="flat-client-listener"/>
+            <!--<AppenderRef ref="json"/>-->
+            <!--<AppenderRef ref="json-client-listener"/>-->
+        </Logger>
+        <Logger name="com.lidp.webdirect" level="trace" additivity="false" includeLocation="${sys:lidp.logging.includeLocation}">
+            <AppenderRef ref="console" level="error"/>
+            <AppenderRef ref="flat-mib-webdirect"/>
+            <!--<AppenderRef ref="json"/>-->
+            <!--<AppenderRef ref="json-mib-webdirect"/>-->
+        </Logger>
+    </Loggers>
+</Configuration>

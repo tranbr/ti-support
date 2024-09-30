@@ -1,0 +1,26 @@
+2023-10-26 18:03:04,030 INFO  (main) [BOOT] JVM OpenJDK 64-Bit Server VM Oracle Corporation 11.0.2+9
+2023-10-26 18:03:04,047 INFO  (main) [BOOT] JVM arguments = []
+2023-10-26 18:03:04,048 INFO  (main) [BOOT] PID = 22860
+2023-10-26 18:03:04,084 INFO  (main) [org.infinispan.SERVER] ISPN080000: Infinispan Server starting
+2023-10-26 18:03:04,085 INFO  (main) [org.infinispan.SERVER] ISPN080017: Server configuration: infinispan.xml
+2023-10-26 18:03:04,085 INFO  (main) [org.infinispan.SERVER] ISPN080032: Logging configuration: C:\Users\tranbr\apps\infinispan\infinispan-server-13.0.6.Final\server\conf\log4j2.xml
+2023-10-26 18:03:04,898 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'query-dsl-filter-converter-factory'
+2023-10-26 18:03:04,899 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'continuous-query-filter-converter-factory'
+2023-10-26 18:03:04,901 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'iteration-filter-converter-factory'
+2023-10-26 18:03:04,902 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'jdk.nashorn.api.scripting.NashornScriptEngineFactory'
+2023-10-26 18:03:05,666 WARN  (main) [org.infinispan.PERSISTENCE] ISPN000554: jboss-marshalling is deprecated and planned for removal
+2023-10-26 18:03:05,689 INFO  (main) [org.infinispan.CONTAINER] ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2023-10-26 18:03:05,882 INFO  (main) [org.infinispan.CONTAINER] ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.6.Final
+2023-10-26 18:03:05,885 INFO  (main) [org.infinispan.CONTAINER] ISPN000389: Loaded global state, version=13.0.6.Final timestamp=2023-09-12T15:09:10.147793700Z
+2023-10-26 18:03:06,015 INFO  (main) [org.infinispan.CLUSTER] ISPN000078: Starting JGroups channel `cluster` with stack `tcp`
+2023-10-26 18:03:11,076 INFO  (main) [org.jgroups.protocols.pbcast.GMS] LIDPTI-101-9169: no members discovered after 2004 ms: creating cluster as coordinator
+2023-10-26 18:03:11,084 INFO  (main) [org.infinispan.CLUSTER] ISPN000094: Received new cluster view for channel cluster: [LIDPTI-101-9169|0] (1) [LIDPTI-101-9169]
+2023-10-26 18:03:11,091 INFO  (main) [org.infinispan.CLUSTER] ISPN000079: Channel `cluster` local address is `LIDPTI-101-9169`, physical addresses are `[172.20.160.1:7800]`
+2023-10-26 18:03:11,357 INFO  (main) [org.jboss.threads] JBoss Threads version 2.3.3.Final
+2023-10-26 18:03:11,421 INFO  (main) [org.infinispan.CONTAINER] ISPN000104: Using EmbeddedTransactionManager
+2023-10-26 18:03:11,795 INFO  (main) [org.infinispan.server.core.RequestTracer] OpenTracing integration is disabled
+2023-10-26 18:03:11,881 INFO  (ForkJoinPool.commonPool-worker-19) [org.infinispan.SERVER] ISPN080018: Started connector HotRod (internal)
+2023-10-26 18:03:11,975 INFO  (main) [org.infinispan.SERVER] ISPN080018: Started connector REST (internal)
+2023-10-26 18:03:12,724 INFO  (main) [org.infinispan.SERVER] ISPN080004: Connector SinglePort (default) listening on 127.0.0.1:11222
+2023-10-26 18:03:12,724 INFO  (main) [org.infinispan.SERVER] ISPN080034: Server 'LIDPTI-101-9169' listening on http://127.0.0.1:11222
+2023-10-26 18:03:12,741 INFO  (main) [org.infinispan.SERVER] ISPN080001: Infinispan Server 13.0.6.Final started in 8655ms

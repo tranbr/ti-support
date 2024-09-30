@@ -1,0 +1,79 @@
+2023-09-12 14:36:26,693 INFO  (main) [BOOT] JVM OpenJDK 64-Bit Server VM Oracle Corporation 11.0.2+9
+2023-09-12 14:36:26,709 INFO  (main) [BOOT] JVM arguments = []
+2023-09-12 14:36:26,710 INFO  (main) [BOOT] PID = 24388
+2023-09-12 14:36:26,746 INFO  (main) [org.infinispan.SERVER] ISPN080000: Infinispan Server starting
+2023-09-12 14:36:26,746 INFO  (main) [org.infinispan.SERVER] ISPN080017: Server configuration: infinispan.xml
+2023-09-12 14:36:26,747 INFO  (main) [org.infinispan.SERVER] ISPN080032: Logging configuration: C:\Users\tranbr\apps\infinispan\infinispan-server-13.0.6.Final\server\conf\log4j2.xml
+2023-09-12 14:36:27,516 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'query-dsl-filter-converter-factory'
+2023-09-12 14:36:27,528 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'continuous-query-filter-converter-factory'
+2023-09-12 14:36:27,530 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'iteration-filter-converter-factory'
+2023-09-12 14:36:27,531 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'jdk.nashorn.api.scripting.NashornScriptEngineFactory'
+2023-09-12 14:36:28,288 WARN  (main) [org.infinispan.PERSISTENCE] ISPN000554: jboss-marshalling is deprecated and planned for removal
+2023-09-12 14:36:28,311 INFO  (main) [org.infinispan.CONTAINER] ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2023-09-12 14:36:28,516 INFO  (main) [org.infinispan.CONTAINER] ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.6.Final
+2023-09-12 14:36:28,518 INFO  (main) [org.infinispan.CONTAINER] ISPN000389: Loaded global state, version=13.0.6.Final timestamp=2023-09-12T15:09:10.147793700Z
+2023-09-12 14:36:28,649 INFO  (main) [org.infinispan.CLUSTER] ISPN000078: Starting JGroups channel `cluster` with stack `tcp`
+2023-09-12 14:36:32,920 INFO  (main) [org.jgroups.protocols.pbcast.GMS] LIDPTI-101-20777: no members discovered after 2004 ms: creating cluster as coordinator
+2023-09-12 14:36:32,927 INFO  (main) [org.infinispan.CLUSTER] ISPN000094: Received new cluster view for channel cluster: [LIDPTI-101-20777|0] (1) [LIDPTI-101-20777]
+2023-09-12 14:36:32,934 INFO  (main) [org.infinispan.CLUSTER] ISPN000079: Channel `cluster` local address is `LIDPTI-101-20777`, physical addresses are `[172.27.240.123:7800]`
+2023-09-12 14:36:33,314 INFO  (main) [org.jboss.threads] JBoss Threads version 2.3.3.Final
+2023-09-12 14:36:33,376 INFO  (main) [org.infinispan.CONTAINER] ISPN000104: Using EmbeddedTransactionManager
+2023-09-12 14:36:33,764 INFO  (main) [org.infinispan.server.core.RequestTracer] OpenTracing integration is disabled
+2023-09-12 14:36:33,846 INFO  (ForkJoinPool.commonPool-worker-19) [org.infinispan.SERVER] ISPN080018: Started connector HotRod (internal)
+2023-09-12 14:36:33,922 INFO  (main) [org.infinispan.SERVER] ISPN080018: Started connector REST (internal)
+2023-09-12 14:36:34,664 INFO  (main) [org.infinispan.SERVER] ISPN080004: Connector SinglePort (default) listening on 127.0.0.1:11222
+2023-09-12 14:36:34,666 INFO  (main) [org.infinispan.SERVER] ISPN080034: Server 'LIDPTI-101-20777' listening on http://127.0.0.1:11222
+2023-09-12 14:36:34,688 INFO  (main) [org.infinispan.SERVER] ISPN080001: Infinispan Server 13.0.6.Final started in 7941ms
+2023-09-12 14:37:18,452 WARN  (blocking-thread--p3-t4) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'closereportscache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-09-12 14:37:18,452 WARN  (blocking-thread--p3-t1) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'setup' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-09-12 14:37:18,452 WARN  (blocking-thread--p3-t6) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'conv' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-09-12 14:37:18,452 WARN  (blocking-thread--p3-t3) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'enqcache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-09-12 14:37:18,452 WARN  (blocking-thread--p3-t5) [org.infinispan.encoding.impl.StorageConfigurationManager] ISPN000599: Configuration for cache 'kerbcache' does not define the encoding for keys or values. If you use operations that require data conversion or queries, you should configure the cache with a specific MediaType for keys or values.
+2023-09-12 16:10:44,280 ERROR (jgroups-30,LIDPTI-101-20777) [org.jgroups.protocols.MPING] LIDPTI-101-20777: failed sending discovery request to /228.6.7.8:46655 java.net.BindException: Cannot assign requested address: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.jgroups.protocols.MPING.sendMcastDiscoveryRequest(MPING.java:286)
+	at org.jgroups.protocols.PING.sendDiscoveryRequest(PING.java:65)
+	at org.jgroups.protocols.PING.findMembers(PING.java:34)
+	at org.jgroups.protocols.Discovery.invokeFindMembers(Discovery.java:217)
+	at org.jgroups.protocols.Discovery.findMembers(Discovery.java:244)
+	at org.jgroups.protocols.Discovery.down(Discovery.java:387)
+	at org.jgroups.protocols.MERGE3$InfoSender.run(MERGE3.java:412)
+	at org.jgroups.util.TimeScheduler3$Task.run(TimeScheduler3.java:324)
+	at org.jgroups.util.TimeScheduler3$RecurringTask.run(TimeScheduler3.java:358)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2023-09-12 16:11:12,627 ERROR (jgroups-31,LIDPTI-101-20777) [org.jgroups.protocols.MPING] LIDPTI-101-20777: failed sending discovery request to /228.6.7.8:46655 java.net.BindException: Cannot assign requested address: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.jgroups.protocols.MPING.sendMcastDiscoveryRequest(MPING.java:286)
+	at org.jgroups.protocols.PING.sendDiscoveryRequest(PING.java:65)
+	at org.jgroups.protocols.PING.findMembers(PING.java:34)
+	at org.jgroups.protocols.Discovery.invokeFindMembers(Discovery.java:217)
+	at org.jgroups.protocols.Discovery.findMembers(Discovery.java:244)
+	at org.jgroups.protocols.Discovery.down(Discovery.java:387)
+	at org.jgroups.protocols.MERGE3$InfoSender.run(MERGE3.java:412)
+	at org.jgroups.util.TimeScheduler3$Task.run(TimeScheduler3.java:324)
+	at org.jgroups.util.TimeScheduler3$RecurringTask.run(TimeScheduler3.java:358)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2023-09-12 16:11:53,182 ERROR (jgroups-28,LIDPTI-101-20777) [org.jgroups.protocols.MPING] LIDPTI-101-20777: failed sending discovery request to /228.6.7.8:46655 java.net.BindException: Cannot assign requested address: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.jgroups.protocols.MPING.sendMcastDiscoveryRequest(MPING.java:286)
+	at org.jgroups.protocols.PING.sendDiscoveryRequest(PING.java:65)
+	at org.jgroups.protocols.PING.findMembers(PING.java:34)
+	at org.jgroups.protocols.Discovery.invokeFindMembers(Discovery.java:217)
+	at org.jgroups.protocols.Discovery.findMembers(Discovery.java:244)
+	at org.jgroups.protocols.Discovery.down(Discovery.java:387)
+	at org.jgroups.protocols.MERGE3$InfoSender.run(MERGE3.java:412)
+	at org.jgroups.util.TimeScheduler3$Task.run(TimeScheduler3.java:324)
+	at org.jgroups.util.TimeScheduler3$RecurringTask.run(TimeScheduler3.java:358)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+

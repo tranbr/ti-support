@@ -1,0 +1,37 @@
+SCRNSIGN
+2024-07-15	15:19:11
+Task Number: 0000001
+User ID: AAA7895
+Company: WLI
+Contract: N/A
+
+Number of Errors: 1
+
+Error Code: 01202I
+Error Description: Operator logon successful
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APSIGN00
+Misc Text: Operator logon successful
+SCRNISTA
+2024-07-15	15:26:34
+Task Number: 0000005
+User ID: AAA7895
+Company: WLI
+Contract: TI6685A002
+
+Number of Errors: 2
+
+Error Code: 63170X
+Error Description: TAMRA premium exceeded by: 21585.83
+Error Connector: W
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APCPRM00
+Misc Text: N/A
+
+Error Code: 45230X
+Error Description: Payment Exceeds Max CV Less Tolerance
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APCPRM00
+Misc Text: Payment Exceeds Max CV Less Tolerance

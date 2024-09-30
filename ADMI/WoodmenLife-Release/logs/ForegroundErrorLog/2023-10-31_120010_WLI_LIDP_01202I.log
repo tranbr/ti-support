@@ -1,0 +1,15 @@
+SCRNSIGN
+2023-10-31	12:00:10
+Task Number: 9349126
+User ID: LIDP
+Company: WLI
+Contract: N/A
+
+Number of Errors: 1
+
+Error Code: 01202I
+Error Description: Operator logon successful
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APSIGN00
+Misc Text: Operator logon successful

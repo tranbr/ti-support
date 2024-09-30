@@ -1,0 +1,470 @@
+PGT01000
+2024-08-22	08:22:37
+Task Number: 0000003
+User ID: lidp
+Company: WLI
+Contract: ETIPARORLN
+
+Number of Errors: 1
+
+Error Code: 13002R
+Error Description: 12211R on policy ETIPARORLN
+Error Connector: BX
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APPGET00
+Misc Text: N/A
+PUP01000
+2024-08-22	08:26:03
+Task Number: 0000011
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 24267I
+Error Description: Reason code override on process control
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAH00
+Misc Text: Reason code override on process control
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+PUP01000
+2024-08-22	08:33:49
+Task Number: 0000013
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 83323I
+Error Description: Policy is terminating - 12/09/2012
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+PUP01000
+2024-08-22	08:38:28
+Task Number: 0000023
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 2
+
+Error Code: 24267I
+Error Description: Reason code override on process control
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAH00
+Misc Text: Reason code override on process control
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+PUP01000
+2024-08-22	08:39:03
+Task Number: 0000025
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 83323I
+Error Description: Policy is terminating - 06/26/2014
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+PUP01000
+2024-08-22	08:39:38
+Task Number: 0000027
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 24267I
+Error Description: Reason code override on process control
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAH00
+Misc Text: Reason code override on process control
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+PUP01000
+2024-08-22	08:40:06
+Task Number: 0000030
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 83323I
+Error Description: Policy is terminating - 06/26/2014
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+SCRNDSBR
+2024-08-22	08:40:54
+Task Number: 0000032
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 05055W
+Error Description: More entries to be displayed
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APDSBR00
+Misc Text: More entries to be displayed
+SCRNDSBR
+2024-08-22	08:41:05
+Task Number: 0000034
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 05055W
+Error Description: More entries to be displayed
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APDSBR00
+Misc Text: More entries to be displayed
+SCRNDSBR
+2024-08-22	08:41:12
+Task Number: 0000036
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 05055W
+Error Description: More entries to be displayed
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APDSBR00
+Misc Text: More entries to be displayed
+SCRNDSBR
+2024-08-22	08:41:18
+Task Number: 0000038
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 05055W
+Error Description: More entries to be displayed
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APDSBR00
+Misc Text: More entries to be displayed
+SCRNDSBR
+2024-08-22	08:41:25
+Task Number: 0000040
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 05055W
+Error Description: More entries to be displayed
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APDSBR00
+Misc Text: More entries to be displayed
+SCRNDSBR
+2024-08-22	08:41:31
+Task Number: 0000042
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 05055W
+Error Description: More entries to be displayed
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APDSBR00
+Misc Text: More entries to be displayed
+SCRNISTA
+2024-08-22	08:42:27
+Task Number: 0000045
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 2
+
+Error Code: 83323I
+Error Description: Policy is terminating - 06/26/2014
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+SCRNISTA
+2024-08-22	08:43:29
+Task Number: 0000047
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 83323I
+Error Description: Policy is terminating - 06/26/2014
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+SCRNISTA
+2024-08-22	08:45:39
+Task Number: 0000050
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 83323I
+Error Description: Policy is terminating - 06/26/2014
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+SCRNISMQ
+2024-08-22	08:46:25
+Task Number: 0000052
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 63571I
+Error Description: Policy has money in suspense
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APDFSR00
+Misc Text: Policy has money in suspense
+SCRNISMQ
+2024-08-22	08:47:32
+Task Number: 0000055
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 63571I
+Error Description: Policy has money in suspense
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APDFSR00
+Misc Text: Policy has money in suspense
+PUP01000
+2024-08-22	08:47:59
+Task Number: 0000057
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 24267I
+Error Description: Reason code override on process control
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAH00
+Misc Text: Reason code override on process control
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+PUP01000
+2024-08-22	08:48:25
+Task Number: 0000059
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 3
+
+Error Code: 21750I
+Error Description: Mode premium set to 0.00
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APTRAC06
+Misc Text: N/A
+
+Error Code: 83323I
+Error Description: Policy is terminating - 06/26/2014
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APPMLP10
+Misc Text: N/A
+
+Error Code: 41071W
+Error Description: Next automatic processing date is 99999999
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.module.APPCMM00
+Misc Text: Next automatic processing date is 99999999
+SCRNISMQ
+2024-08-22	08:48:46
+Task Number: 0000061
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 63571I
+Error Description: Policy has money in suspense
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.tablemodule.APDFSR00
+Misc Text: Policy has money in suspense
+SCRNPLXB
+2024-08-22	09:31:33
+Task Number: 0000063
+User ID: lidp
+Company: WLI
+Contract: ETIPARLN00
+
+Number of Errors: 1
+
+Error Code: 83872R
+Error Description: Invalid transaction
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.control.TransProcessor
+Misc Text: Invalid transaction

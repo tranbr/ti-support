@@ -1,0 +1,30 @@
+SCRNSIGN
+2024-04-04	11:44:32
+Task Number: 0000001
+User ID: 
+Company: WLI
+Contract: N/A
+
+Number of Errors: 1
+
+Error Code: 01202I
+Error Description: Operator logon successful
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APSIGN00
+Misc Text: Operator logon successful
+SCRNSIGN
+2024-04-04	11:44:53
+Task Number: 0000003
+User ID: 
+Company: WLI
+Contract: N/A
+
+Number of Errors: 1
+
+Error Code: 01202I
+Error Description: Operator logon successful
+Error Connector: N/A
+Error Connector Type: N/A
+Program: com.lidp.enterprise.process.transaction.APSIGN00
+Misc Text: Operator logon successful

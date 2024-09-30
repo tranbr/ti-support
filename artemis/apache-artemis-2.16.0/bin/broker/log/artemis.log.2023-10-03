@@ -1,0 +1,973 @@
+2023-10-03 09:46:39,794 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 09:46:39,834 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 09:46:39,867 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 09:46:39,912 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 09:46:39,929 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 09:46:39,930 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 09:46:39,930 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 09:46:39,931 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 09:46:39,931 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 09:46:39,931 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 09:46:39,978 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 09:46:39,978 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 09:46:41,440 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 09:46:41,442 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 09:46:41,448 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 09:46:41,449 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 09:46:41,449 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 09:46:41,449 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 09:46:41,449 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 09:46:41,449 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 09:46:41,450 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,451 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 09:46:41,451 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,451 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 09:46:41,451 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,451 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 09:46:41,452 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,453 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 09:46:41,454 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 09:46:41,454 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 09:46:41,454 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,454 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 09:46:41,454 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 09:46:41,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 09:46:41,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 09:46:41,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 09:46:41,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 09:46:41,458 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,459 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 09:46:41,459 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,459 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 09:46:41,459 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,459 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 09:46:41,459 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,460 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 09:46:41,460 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,460 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 09:46:41,460 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 09:46:41,461 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 09:46:41,462 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,462 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 09:46:41,462 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,462 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 09:46:41,463 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,463 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 09:46:41,463 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,463 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 09:46:41,463 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,464 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 09:46:41,464 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,464 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 09:46:41,464 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,464 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 09:46:41,464 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,465 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 09:46:41,465 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,465 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 09:46:41,465 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,465 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 09:46:41,465 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,466 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 09:46:41,466 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 09:46:41,466 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 09:46:41,466 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 09:46:42,279 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 09:46:42,294 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 09:46:42,307 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 09:46:42,325 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 09:46:42,337 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 09:46:42,338 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 09:46:42,339 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 09:46:43,309 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 09:46:43,485 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 09:46:45,292 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 09:46:45,330 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 09:46:45,332 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 09:46:45,339 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 09:46:45,353 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 09:46:45,360 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 09:46:45,734 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 09:46:45,735 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 09:46:45,735 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
+2023-10-03 14:14:10,886 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 14:14:10,921 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 14:14:10,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 14:14:10,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 14:14:11,013 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 14:14:11,013 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 14:14:11,013 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 14:14:11,014 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 14:14:11,014 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 14:14:11,014 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 14:14:11,107 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 14:14:11,107 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 14:14:12,061 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 14:14:12,064 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 14:14:12,068 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 14:14:12,068 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 14:14:12,068 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 14:14:12,069 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,071 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,072 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 14:14:12,073 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,074 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 14:14:12,075 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,075 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 14:14:12,075 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,075 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 14:14:12,075 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,076 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,077 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,078 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 14:14:12,079 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 14:14:12,080 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,081 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 14:14:12,082 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 14:14:12,860 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 14:14:12,873 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 14:14:12,886 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 14:14:12,903 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 14:14:12,916 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 14:14:12,962 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 14:14:12,962 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 14:14:13,738 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 14:14:13,831 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 14:14:15,141 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 14:14:15,167 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 14:14:15,170 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 14:14:15,176 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 14:14:15,191 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 14:14:15,195 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 14:14:15,603 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 14:14:15,603 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 14:14:15,603 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
+2023-10-03 14:23:20,345 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 14:23:20,412 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 14:23:20,487 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 14:23:20,606 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 14:23:20,645 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 14:23:20,647 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 14:23:20,648 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 14:23:20,649 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 14:23:20,649 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 14:23:20,650 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 14:23:20,720 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 14:23:20,720 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 14:23:22,919 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 14:23:22,932 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 14:23:22,950 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 14:23:22,951 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 14:23:22,951 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 14:23:22,951 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 14:23:22,951 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 14:23:22,952 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 14:23:22,952 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,952 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 14:23:22,953 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,953 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 14:23:22,953 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,953 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 14:23:22,953 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,953 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 14:23:22,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 14:23:22,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 14:23:22,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,955 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 14:23:22,956 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,956 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 14:23:22,956 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,957 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 14:23:22,957 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,957 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 14:23:22,957 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,977 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 14:23:22,978 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,978 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 14:23:22,978 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,979 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 14:23:22,979 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 14:23:22,979 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 14:23:22,979 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,980 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 14:23:22,980 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,980 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 14:23:22,980 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,981 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 14:23:22,981 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,981 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 14:23:22,981 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,982 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 14:23:22,982 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,982 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 14:23:22,983 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,983 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 14:23:22,983 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,983 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 14:23:22,984 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,984 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 14:23:22,984 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,984 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 14:23:22,984 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,985 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 14:23:22,986 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,986 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 14:23:22,986 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,986 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 14:23:22,986 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 14:23:22,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 14:23:22,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 14:23:22,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,988 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 14:23:22,988 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,988 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 14:23:22,988 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,988 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 14:23:22,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 14:23:22,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 14:23:22,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 14:23:22,990 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,990 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 14:23:22,990 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 14:23:22,990 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 14:23:22,990 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:22,990 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 14:23:22,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,018 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 14:23:23,018 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,018 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 14:23:23,019 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,019 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 14:23:23,019 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,019 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 14:23:23,019 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,020 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 14:23:23,020 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,020 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 14:23:23,020 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 14:23:23,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 14:23:23,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 14:23:23,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,022 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 14:23:23,022 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:23:23,022 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 14:23:23,022 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 14:23:24,829 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 14:23:24,866 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 14:23:24,919 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 14:23:24,983 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 14:23:25,009 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 14:23:25,012 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 14:23:25,012 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 14:23:26,256 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 14:23:26,447 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 14:23:29,175 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 14:23:29,240 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 14:23:29,245 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 14:23:29,256 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 14:23:29,279 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 14:23:29,288 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 14:23:29,891 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 14:23:29,891 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 14:23:29,892 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
+2023-10-03 14:32:53,711 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 14:32:53,747 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 14:32:53,777 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 14:32:53,814 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 14:32:53,829 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 14:32:53,830 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 14:32:53,830 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 14:32:53,830 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 14:32:53,831 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 14:32:53,831 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 14:32:53,873 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 14:32:53,874 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 14:32:54,796 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 14:32:54,798 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 14:32:54,804 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 14:32:54,804 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 14:32:54,805 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 14:32:54,805 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 14:32:54,805 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 14:32:54,805 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 14:32:54,805 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,805 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 14:32:54,806 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,806 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 14:32:54,806 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,806 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 14:32:54,806 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,807 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 14:32:54,807 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,807 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 14:32:54,807 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,807 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 14:32:54,808 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,808 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 14:32:54,808 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,808 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 14:32:54,808 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,809 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 14:32:54,810 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,810 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 14:32:54,810 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 14:32:54,810 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 14:32:54,810 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,811 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 14:32:54,811 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,811 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 14:32:54,811 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,812 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 14:32:54,812 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,812 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 14:32:54,812 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,812 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 14:32:54,813 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,813 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 14:32:54,813 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,813 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 14:32:54,813 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,814 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 14:32:54,814 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,815 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,816 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 14:32:54,817 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 14:32:54,818 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 14:32:54,819 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 14:32:54,820 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,821 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 14:32:54,821 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:32:54,821 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 14:32:54,821 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 14:32:55,543 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 14:32:55,557 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 14:32:55,569 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 14:32:55,586 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 14:32:55,599 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 14:32:55,606 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 14:32:55,606 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 14:32:56,393 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 14:32:56,481 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 14:32:57,690 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 14:32:57,716 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 14:32:57,718 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 14:32:57,723 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 14:32:57,734 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 14:32:57,738 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 14:32:58,026 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 14:32:58,026 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 14:32:58,027 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
+2023-10-03 14:45:58,761 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 14:45:58,797 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 14:45:58,827 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 14:45:58,863 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 14:45:58,880 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 14:45:58,880 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 14:45:58,881 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 14:45:58,881 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 14:45:58,881 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 14:45:58,882 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 14:45:58,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 14:45:58,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 14:45:59,981 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 14:45:59,983 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 14:45:59,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 14:45:59,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 14:45:59,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 14:45:59,989 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 14:45:59,991 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,992 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,993 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 14:45:59,994 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,995 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 14:45:59,996 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,996 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 14:45:59,996 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,996 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 14:45:59,996 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 14:45:59,997 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 14:45:59,998 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,000 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,001 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 14:46:00,002 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,003 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 14:46:00,003 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 14:46:00,003 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 14:46:00,003 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 14:46:00,883 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 14:46:00,900 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 14:46:00,916 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 14:46:00,938 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 14:46:00,954 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 14:46:00,962 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 14:46:00,962 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 14:46:01,725 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 14:46:01,824 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 14:46:03,079 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 14:46:03,113 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 14:46:03,114 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 14:46:03,120 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 14:46:03,133 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 14:46:03,138 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 14:46:03,502 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 14:46:03,502 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 14:46:03,502 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
+2023-10-03 15:12:29,566 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 15:12:29,598 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 15:12:29,628 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 15:12:29,664 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 15:12:29,679 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 15:12:29,680 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 15:12:29,680 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 15:12:29,680 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 15:12:29,680 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 15:12:29,682 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 15:12:29,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 15:12:29,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 15:12:30,750 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 15:12:30,752 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 15:12:30,758 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,759 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 15:12:30,760 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,760 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 15:12:30,761 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,761 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 15:12:30,761 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,761 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 15:12:30,761 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,761 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 15:12:30,762 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,763 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 15:12:30,764 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,764 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 15:12:30,764 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 15:12:30,764 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 15:12:30,764 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,765 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 15:12:30,765 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,765 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 15:12:30,765 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,765 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 15:12:30,766 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,766 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 15:12:30,766 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,766 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 15:12:30,766 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,766 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 15:12:30,767 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,767 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 15:12:30,767 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,767 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,768 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,769 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 15:12:30,771 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 15:12:30,772 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,773 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,774 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 15:12:30,775 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:12:30,775 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 15:12:30,775 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 15:12:31,586 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 15:12:31,599 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 15:12:31,612 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 15:12:31,628 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 15:12:31,644 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 15:12:31,693 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 15:12:31,693 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 15:12:32,425 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 15:12:32,529 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 15:12:33,526 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 15:12:33,553 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 15:12:33,555 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 15:12:33,560 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 15:12:33,571 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 15:12:33,575 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 15:12:33,927 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 15:12:33,927 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 15:12:33,928 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
+2023-10-03 15:33:00,482 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2023-10-03 15:33:00,514 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2023-10-03 15:33:00,546 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2023-10-03 15:33:00,581 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 536,870,912
+2023-10-03 15:33:00,599 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2023-10-03 15:33:00,599 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2023-10-03 15:33:00,600 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2023-10-03 15:33:00,600 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2023-10-03 15:33:00,600 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2023-10-03 15:33:00,601 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2023-10-03 15:33:00,721 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2023-10-03 15:33:00,721 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2023-10-03 15:33:01,686 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2023-10-03 15:33:01,689 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2023-10-03 15:33:01,695 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2023-10-03 15:33:01,695 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2023-10-03 15:33:01,695 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address InsertReptObjTriggerQueue supporting [ANYCAST]
+2023-10-03 15:33:01,695 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue InsertReptObjTriggerQueue on address InsertReptObjTriggerQueue
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address testQueue supporting [ANYCAST]
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue testQueue on address testQueue
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBMasterQueue on address ADMBMasterQueue
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCMasterQueue on address ADMCMasterQueue
+2023-10-03 15:33:01,696 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFMasterQueue on address ADMFMasterQueue
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHMasterQueue on address ADMHMasterQueue
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJMasterQueue on address ADMJMasterQueue
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMKMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,697 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMKMasterQueue on address ADMKMasterQueue
+2023-10-03 15:33:01,698 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMLMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,698 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMLMasterQueue on address ADMLMasterQueue
+2023-10-03 15:33:01,698 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,698 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNMasterQueue on address ADMNMasterQueue
+2023-10-03 15:33:01,698 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,698 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQMasterQueue on address ADMQMasterQueue
+2023-10-03 15:33:01,699 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,699 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRMasterQueue on address ADMRMasterQueue
+2023-10-03 15:33:01,699 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,699 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCMasterQueue on address ADNCMasterQueue
+2023-10-03 15:33:01,699 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,700 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDMasterQueue on address ADNDMasterQueue
+2023-10-03 15:33:01,700 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,700 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKMasterQueue on address ADNKMasterQueue
+2023-10-03 15:33:01,700 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRMasterQueue supporting [ANYCAST]
+2023-10-03 15:33:01,700 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRMasterQueue on address ADNRMasterQueue
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBProcessQueue on address ADMBProcessQueue
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCProcessQueue on address ADMCProcessQueue
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMDProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMDProcessQueue on address ADMDProcessQueue
+2023-10-03 15:33:01,701 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFProcessQueue on address ADMFProcessQueue
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMGProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMGProcessQueue on address ADMGProcessQueue
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHProcessQueue on address ADMHProcessQueue
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,702 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJProcessQueue on address ADMJProcessQueue
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNProcessQueue on address ADMNProcessQueue
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMPProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMPProcessQueue on address ADMPProcessQueue
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMQProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMQProcessQueue on address ADMQProcessQueue
+2023-10-03 15:33:01,703 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRProcessQueue on address ADMRProcessQueue
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMSProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMSProcessQueue on address ADMSProcessQueue
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBProcessQueue on address ADNBProcessQueue
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCProcessQueue on address ADNCProcessQueue
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,704 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDProcessQueue on address ADNDProcessQueue
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNFProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNFProcessQueue on address ADNFProcessQueue
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKProcessQueue on address ADNKProcessQueue
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNPProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNPProcessQueue on address ADNPProcessQueue
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,705 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRProcessQueue on address ADNRProcessQueue
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address CONVProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue CONVProcessQueue on address CONVProcessQueue
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address RWRWProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue RWRWProcessQueue on address RWRWProcessQueue
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TESTProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TESTProcessQueue on address TESTProcessQueue
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address TTRNProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue TTRNProcessQueue on address TTRNProcessQueue
+2023-10-03 15:33:01,706 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address PROPProcessQueue supporting [ANYCAST]
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue PROPProcessQueue on address PROPProcessQueue
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMBRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMBRescheduleQueue on address ADMBRescheduleQueue
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMCRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMCRescheduleQueue on address ADMCRescheduleQueue
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMFRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMFRescheduleQueue on address ADMFRescheduleQueue
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMHRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMHRescheduleQueue on address ADMHRescheduleQueue
+2023-10-03 15:33:01,707 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMJRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMJRescheduleQueue on address ADMJRescheduleQueue
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMNRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMNRescheduleQueue on address ADMNRescheduleQueue
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADMRRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADMRRescheduleQueue on address ADMRRescheduleQueue
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNBRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNBRescheduleQueue on address ADNBRescheduleQueue
+2023-10-03 15:33:01,708 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNCRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNCRescheduleQueue on address ADNCRescheduleQueue
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNDRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNDRescheduleQueue on address ADNDRescheduleQueue
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNKRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNKRescheduleQueue on address ADNKRescheduleQueue
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ADNRRescheduleQueue supporting [ANYCAST]
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ADNRRescheduleQueue on address ADNRRescheduleQueue
+2023-10-03 15:33:01,709 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address pluginReloadTopic supporting [MULTICAST]
+2023-10-03 15:33:02,509 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2023-10-03 15:33:02,523 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5445 for protocols [HORNETQ,STOMP]
+2023-10-03 15:33:02,535 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:5672 for protocols [AMQP]
+2023-10-03 15:33:02,553 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:1883 for protocols [MQTT]
+2023-10-03 15:33:02,565 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started NIO Acceptor at 127.0.0.1:61613 for protocols [STOMP]
+2023-10-03 15:33:02,611 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2023-10-03 15:33:02,612 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.16.0 [127.0.0.1, nodeID=8fcfcd9e-5183-11ee-b14f-00ff108c40be] 
+2023-10-03 15:33:03,339 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2023-10-03 15:33:03,423 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2023-10-03 15:33:04,517 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2023-10-03 15:33:04,544 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2023-10-03 15:33:04,545 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2023-10-03 15:33:04,552 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2023-10-03 15:33:04,567 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2023-10-03 15:33:04,574 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/C:/Users/tranbr/apps/artemis/apache-artemis-2.16.0/bin/broker/etc/\jolokia-access.xml]
+2023-10-03 15:33:04,927 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2023-10-03 15:33:04,927 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2023-10-03 15:33:04,927 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console

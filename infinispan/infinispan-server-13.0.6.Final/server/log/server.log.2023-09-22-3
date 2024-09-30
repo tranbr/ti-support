@@ -1,0 +1,10 @@
+2023-09-22 12:44:50,789 INFO  (main) [BOOT] JVM OpenJDK 64-Bit Server VM Oracle Corporation 11.0.2+9
+2023-09-22 12:44:50,802 INFO  (main) [BOOT] JVM arguments = []
+2023-09-22 12:44:50,802 INFO  (main) [BOOT] PID = 16484
+2023-09-22 12:44:50,840 INFO  (main) [org.infinispan.SERVER] ISPN080000: Infinispan Server starting
+2023-09-22 12:44:50,840 INFO  (main) [org.infinispan.SERVER] ISPN080017: Server configuration: infinispan.xml
+2023-09-22 12:44:50,840 INFO  (main) [org.infinispan.SERVER] ISPN080032: Logging configuration: C:\Users\tranbr\apps\infinispan\infinispan-server-13.0.6.Final\server\conf\log4j2.xml
+2023-09-22 12:44:51,744 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'query-dsl-filter-converter-factory'
+2023-09-22 12:44:51,744 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'continuous-query-filter-converter-factory'
+2023-09-22 12:44:51,746 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'iteration-filter-converter-factory'
+2023-09-22 12:44:51,747 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'jdk.nashorn.api.scripting.NashornScriptEngineFactory'
